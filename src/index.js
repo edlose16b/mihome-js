@@ -1,10 +1,10 @@
 require('dotenv').config();
 const mihome = require('node-mihome');
 const hsvColors = require('./core/colors');
-const { wait } = require('./core/helper');
+const { wait, loop } = require('./core/helper');
 const DeviceRepository = require('./device-repository');
 // Routines
-const { peruFlag, boliviaFlag, venezuelaFlag } = require('./routines');
+const { peruFlag, boliviaFlag, venezuelaFlag, colombiaFlag } = require('./routines');
 
 
 // local miIO
@@ -64,13 +64,13 @@ async function main() {
 
 
     device.on('properties', (data) => {
-        console.log('onListen', data);
+        console.log('onListen->', data);
     });
 
     // var responsePower = await device.setPower(true);
 
 
-    await device.setColorHSV(hsvColors['white']);
+    await loop(() => colombiaFlag(device), 2);
 
     console.log('Finished');
     return Promise.resolve();

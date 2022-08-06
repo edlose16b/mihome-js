@@ -1,9 +1,8 @@
-
 module.exports = {
     'red': { 'hue': 0, 'saturation': 100, 'value': 200 },
     'green': { 'hue': 120, 'saturation': 100, 'value': 200 },
     'blue': { 'hue': 240, 'saturation': 100, 'value': 200 },
-    'yellow': { 'hue': 60, 'saturation': 100, 'value': 200 },
+    'yellow': { 'hue': 56, 'saturation': 100, 'value': 100 },
     'cyan': { 'hue': 180, 'saturation': 100, 'value': 200 },
     'magenta': { 'hue': 300, 'saturation': 100, 'value': 200 },
     'white': { 'hue': 0, 'saturation': 0, 'value': 100 },
